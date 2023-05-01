@@ -6,7 +6,7 @@ import {NavLink} from "react-router-dom";
 import {questions} from "./questions";
 
 const TeamForm = () => {
-    const [formData, setFormData] = useState(getFormModel(questions));
+    const [formData, setFormData] = useState<{id: string,answer: string, question:string}[]>([]);
 
     const handleInputChange = useCallback((event: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const {name, value} = event.currentTarget;
@@ -34,11 +34,3 @@ const TeamForm = () => {
 };
 
 export default TeamForm;
-
-const getFormModel = (questions: string[]) => {
-    return questions.map((question) => ({
-        question,
-        answer: '',
-        id: question
-    }));
-}
