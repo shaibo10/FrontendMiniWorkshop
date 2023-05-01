@@ -7,11 +7,6 @@ export const ChatGptConclusions = () => {
 
     useEffect(() => {
         const fetchConclusions = async () => {
-            try {
-                const response = await getConclusions();
-                setConclusions(response.data);
-            } catch (e) {
-            }
         };
 
         fetchConclusions();

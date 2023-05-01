@@ -19,12 +19,7 @@ const TeamForm = () => {
 
 
     const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        try {
-            await postFormData(formData);
-        } catch (e) {
-        }
-    }, [formData]);
+    }, []);
 
     return useObserver(() => (
         <>
