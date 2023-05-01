@@ -26,11 +26,7 @@ const TeamForm = () => {
             <NavLink to="/teamChatGptConclusions">ChatGpt Conclusions</NavLink>
             <form onSubmit={handleSubmit}>
                 <Stack tokens={{childrenGap: 20}}>
-                    <label htmlFor={formData[0].id}>{formData[0].name}</label>
-                    <input type="text" id={formData[0].id} name={formData[0].question}>
-                    <label htmlFor={formData[1].id}>{formData[1].name}</label>
-                    <input type="text" id={formData[1].id} name={formData[1].question}>
-                    <input type="submit" value="Submit">
+
                 </Stack>
             </form>
         </>
