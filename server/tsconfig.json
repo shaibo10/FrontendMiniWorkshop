@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2021",
+    "module": "CommonJS",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "strict": true,
+    "sourceMap": true
+  },
+  "include": [
+    "src/index.ts"
+  ],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
