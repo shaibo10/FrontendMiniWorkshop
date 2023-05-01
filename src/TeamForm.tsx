@@ -26,14 +26,18 @@ const TeamForm = () => {
             <NavLink to="/teamChatGptConclusions">ChatGpt Conclusions</NavLink>
             <form onSubmit={handleSubmit}>
                 <Stack tokens={{childrenGap: 20}}>
-                    {formData.map((item) => (
-                        <TextField
-                            name={item.id}
-                            label={item.question}
-                            value={item.answer}
-                            onChange={handleInputChange}
-                        />
-                    ))}
+                    <TextField
+                        name={formData[0].id}
+                        label={formData[0].question}
+                        value={formData[0].answer}
+                        onChange={handleInputChange}
+                    />
+                    <TextField
+                        name={formData[1].id}
+                        label={formData[1].question}
+                        value={formData[1].answer}
+                        onChange={handleInputChange}
+                    />
                     <PrimaryButton type="submit">Submit</PrimaryButton>
                 </Stack>
             </form>
