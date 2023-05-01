@@ -7,15 +7,6 @@ import {questions} from "./questions";
 
 const TeamForm = () => {
     const [formData, setFormData] = useState(getFormModel(questions));
-    const [showErrorMessage, setShowErrorMessage] = useState(false);
-
-    const closeErrorMessage = useCallback(() => {
-        setShowErrorMessage(false);
-    }, []);
-
-    const displayErrorMessage = useCallback(() => {
-        setShowErrorMessage(true);
-    }, []);
 
     const handleInputChange = useCallback((event: React.FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const {name, value} = event.currentTarget;
@@ -32,20 +23,11 @@ const TeamForm = () => {
         try {
             await postFormData(formData);
         } catch (e) {
-            displayErrorMessage();
         }
     }, [formData]);
 
     return useObserver(() => (
         <>
-            {showErrorMessage && <MessageBar
-                messageBarType={MessageBarType.error}
-                isMultiline={false}
-                onDismiss={closeErrorMessage}
-                dismissButtonAriaLabel="Close"
-            >
-                Error on form submission. Please try again.
-            </MessageBar>}
             <NavLink to="/teamChatGptConclusions">ChatGpt Conclusions</NavLink>
             <form onSubmit={handleSubmit}>
                 <Stack tokens={{childrenGap: 20}}>
