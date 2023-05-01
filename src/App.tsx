@@ -20,12 +20,6 @@ function App() {
           rel="noopener noreferrer"
         >
         </a>
-          <Router>
-            <Routes>
-              <Route path="/" element={<TeamForm/>} />
-              <Route path="/teamChatGptConclusions" element={<ChatGptConclusions/>} />
-            </Routes>
-          </Router>
       </header>
     </div>
   );

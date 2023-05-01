@@ -23,7 +23,6 @@ const TeamForm = () => {
 
     return useObserver(() => (
         <>
-            <NavLink to="/teamChatGptConclusions">ChatGpt Conclusions</NavLink>
             <form onSubmit={handleSubmit}>
                 <Stack tokens={{childrenGap: 20}}>
 
