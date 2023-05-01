@@ -30,10 +30,8 @@ const TeamForm = () => {
                         <TextField
                             name={item.id}
                             label={item.question}
-                            required
                             value={item.answer}
                             onChange={handleInputChange}
-                            key={item.id}
                         />
                     ))}
                     <PrimaryButton type="submit">Submit</PrimaryButton>
